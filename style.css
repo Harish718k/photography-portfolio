@@ -166,16 +166,33 @@ svg{
 
 .wrapper .image{
     width: 100%;
-    height: 100%;
+    height: 480px;
 }
 
 .wrapper img{
     margin-top: 50px;
     width: 100%;
+    height: 100%;
 }
 
 .about img{
     width: 80%;
+}
+
+.about h1{
+    position: relative;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.about h1::before{
+    content: " ";
+    position: absolute;
+    top: 25px;
+    left: -20px;
+    width: 70px;
+    height: 1px;
+    background-color: #161616;
 }
 
 .about p{
@@ -203,7 +220,7 @@ svg{
 .slider button{
     position: absolute;
     top: 40%;
-    z-index: 2;
+    z-index: 3;
     font-size: 30px;
     padding: 10px 20px;
     transition: 0.3s ease-in-out;
@@ -219,8 +236,15 @@ svg{
     transform: scale(1.2);
 }
 
+.slider1 .image{
+    width: 100%;
+    height: 100%;
+}
+
 .slider1 img{
     width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
 .slider1 svg{
@@ -233,6 +257,16 @@ svg{
 
 .work2 p{
     max-width: 400px;
+}
+
+.work2.image{
+    height: 250px;
+    width: 100%;
+}
+
+.work2 .image img{
+    width: 100%;
+    height: auto;
 }
 
 .contact{
@@ -255,10 +289,13 @@ svg{
     margin: 0px auto;
 }
 
+
+
 .form{
     margin-top: 25px;
     max-width: 600px;
     margin: 0px auto;
+    padding: 0px 20px;
 }
 
 .form .mail{
@@ -341,3 +378,142 @@ footer p span{
     font-size: 16px;
 }
 
+
+
+@media screen and (max-width: 1023px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px 30px;
+        justify-items: end;
+    }
+    
+    .wrapper .contant{
+        width: 500px;
+        margin-top: 100px;
+        text-align: right;
+    }
+    
+    .wrapper .contant h1{
+        font-size: 40px;
+        font-weight: 200;
+        margin-bottom: 30px;
+        color: rgb(26, 26, 26);
+    }
+    
+    .wrapper .contant h1 span{
+        font-weight: 700;
+    }
+    
+    .wrapper .line{
+        margin-top: 30px;
+        width: 1px;
+        height: 80px;
+        background-color: #000000;
+        display: none;
+    }
+    
+    .wrapper .image{
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .about h1{
+        text-align: end;
+    }
+
+    .about h1::before{
+        content: " ";
+        position: absolute;
+        top: 25px;
+        left: -20px;
+        width: 70px;
+        height: 0px;
+        background-color: #161616;
+    }
+    .work2 .contant{
+        margin-top: 200px;
+    }
+    .work2 p{
+        margin-left: 100px;
+    }
+    
+    .slider2 .img-background-left,.slider2 .img-background-right{
+        width: 448px;
+        height: 298.66px;
+        position: absolute;
+        z-index: 1;
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0px 20px;
+        justify-items: center;
+    }
+    .wrapper .contant{
+        width: 400px;
+        margin-top: 120px;
+        text-align: center;
+    }
+
+    .wrapper .contant h1{
+        font-size: 34px;
+        font-weight: 200;
+        margin-bottom: 30px;
+        color: rgb(26, 26, 26);
+    }
+    
+    .wrapper .contant h1 span{
+        font-weight: 700;
+    }
+
+    .about h1{
+        text-align: center;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .slider button{
+        position: absolute;
+        top: 45%;
+        z-index: 3;
+        font-size: 20px;
+        padding: 5px 10px;
+        transition: 0.3s ease-in-out;
+    }
+    .slider .nextBtn{
+        right: 30px;
+    }
+    .slider .preBtn{
+        left: 30px;
+    }
+
+    .work2 p{
+        margin-left: 0px;
+    }
+
+    .work2 .contant{
+        margin-top: 200px;
+    }
+
+    .form .mail{
+        display: block;
+        gap: 20px;
+    }
+
+    .slider2 .img-main{
+        margin-top: 13%;
+        height: 388px;
+        width: 400px;
+        z-index: 2;
+    }
+    
+}
